@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ui-grid demo</title>
+<link href="../css/bootstrap-flatly.min.css" />
+<style>
+.container{position:relative;padding-left:200px;}
+.container ul{position:absolute;left:0;}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>ui-grid demo</h1>
+<ul>
+<li><a href="cellTemplate.html" target="demo">	cellTemplate	</a></li>
+<li><a href="col-swap.html" target="demo">	col-swap	</a></li>
+<li><a href="filtertoggle.html" target="demo">	filtertoggle	</a></li>
+<li><a href="grid-accessiblility.html" target="demo">	grid-accessiblility	</a></li>
+<li><a href="grid-directive.html" target="demo">	grid-directive	</a></li>
+<li><a href="grid-in-tabs.html" target="demo">	grid-in-tabs	</a></li>
+<li><a href="grid-save.html" target="demo">	grid-save	</a></li>
+<li><a href="leak-grid-many-options.html" target="demo">	leak-grid-many-options	</a></li>
+<li><a href="leak-grid-no-options.html" target="demo">	leak-grid-no-options	</a></li>
+<li><a href="leak-main.html" target="demo">	leak-main	</a></li>
+<li><a href="leak-no-grid.html" target="demo">	leak-no-grid	</a></li>
+<li><a href="leak-testing.html" target="demo">	leak-testing	</a></li>
+<li><a href="modal.html" target="demo">	modal	</a></li>
+<li><a href="overflow-problem.html" target="demo">	overflow-problem	</a></li>
+<li><a href="pinning.html" target="demo">	pinning	</a></li>
+<li><a href="subgrid.html" target="demo">	subgrid	</a></li>
+</ul>
+<iframe src="grid-directive.html" frameborder="0" name="demo"></iframe>
+<script>
+window.onload = function(){
+	var iframe=document.getElementsByTagName('iframe')[0];
+	var body=document.documentElement;
+	iframe.style.width=(body.clientWidth-220)+'px';
+	iframe.style.height=(body.clientHeight-100)+'px';
+}
+</script>
+</div>
+</body>
+</html>
