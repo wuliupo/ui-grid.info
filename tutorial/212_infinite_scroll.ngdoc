@@ -92,7 +92,7 @@ Finally, we can reset the data, which gets us back to the middle page and sets t
 
       $scope.getFirstData = function() {
         var promise = $q.defer();
-        $http.get('/data/10000_complex.json')
+        $http.get('./data/10000_complex.json')
         .success(function(data) {
           var newData = $scope.getPage(data, $scope.lastPage);
           $scope.data = $scope.data.concat(newData);
@@ -103,7 +103,7 @@ Finally, we can reset the data, which gets us back to the middle page and sets t
 
       $scope.getDataDown = function() {
         var promise = $q.defer();
-        $http.get('/data/10000_complex.json')
+        $http.get('./data/10000_complex.json')
         .success(function(data) {
           $scope.lastPage++;
           var newData = $scope.getPage(data, $scope.lastPage);
@@ -122,7 +122,7 @@ Finally, we can reset the data, which gets us back to the middle page and sets t
 
       $scope.getDataUp = function() {
         var promise = $q.defer();
-        $http.get('/data/10000_complex.json')
+        $http.get('./data/10000_complex.json')
         .success(function(data) {
           $scope.firstPage--;
           var newData = $scope.getPage(data, $scope.firstPage);

@@ -77,7 +77,7 @@ auto-selects the first row once the data is loaded.
 
       $scope.gridOptions.multiSelect = true;
 
-      $http.get('/data/500_complex.json')
+      $http.get('./data/500_complex.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
           $timeout(function() {
@@ -168,7 +168,7 @@ auto-selects the first row once the data is loaded.
         $scope.gridApi.core.notifyDataChange( uiGridConstants.dataChange.OPTIONS);
       };
 
-      $http.get('/data/500_complex.json')
+      $http.get('./data/500_complex.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
 

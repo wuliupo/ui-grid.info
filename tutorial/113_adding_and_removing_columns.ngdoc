@@ -55,7 +55,7 @@ def properties), and call the notifyDataChange api to force an update.
         $scope.gridApi.core.notifyDataChange(uiGridConstants.dataChange.COLUMN);
       }
     
-      $http.get('/data/100.json')
+      $http.get('./data/100.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
         });

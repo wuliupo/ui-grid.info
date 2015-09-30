@@ -7452,7 +7452,7 @@ angular.module('ui.grid')
        * `$scope.gridOptions.data = [ ];`
        * or
        *
-       * `$http.get('/data/100.json')
+       * `$http.get('./data/100.json')
        * .success(function(data) {
        *   $scope.myData = data;
        *   $scope.gridOptions.data = $scope.myData;
@@ -17070,7 +17070,7 @@ module.filter('px', function() {
            * @example
            * <pre>
            *   gridOptions.exporterAllDataFn = function () {
-           *     return $http.get('/data/100.json')
+           *     return $http.get('./data/100.json')
            *   }
            * </pre>
            */
@@ -17089,7 +17089,7 @@ module.filter('px', function() {
            * @example
            * <pre>
            *   gridOptions.exporterAllDataFn = function () {
-           *     return $http.get('/data/100.json')
+           *     return $http.get('./data/100.json')
            *   }
            * </pre>
            */

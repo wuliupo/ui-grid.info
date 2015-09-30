@@ -63,7 +63,7 @@ All features are enabled to get an idea of performance
         var sec = $interval(function () {
           $scope.callsPending++;
 
-          $http.get('/data/500_complex.json')
+          $http.get('./data/500_complex.json')
             .success(function(data) {
               $scope.callsPending--;
 

@@ -6,7 +6,7 @@ app.run(function($log, $rootScope, $http) {
 });
 
 app.constant('FILES',{
-  DATA_100: '/data/100.json',
+  DATA_100: './data/100.json',
   LESS_MAIN: '/less/main.less',
   LESS_VARIABLES: '/less/variables.less',
   JSON_THEMES: '/customizer/themes/themes.json',

@@ -72,7 +72,7 @@
             $scope.gridApi.saveState.restore( $scope, $scope.state );
         };
 
-        $http.get('https://rawgit.com/angular-ui/ui-grid.info/gh-pages/data/500_complex.json')
+        $http.get('./data/500_complex.json')
                 .success(function(data) {
                     $scope.gridOptions.data = data;
                 });

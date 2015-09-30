@@ -39,7 +39,7 @@ It is also possible to disable pinning on column level. Note the 'id' column def
         { name:'friends[2].name', displayName:'3rd friend', width:150 },
       ];
 
-      $http.get('/data/500_complex.json')
+      $http.get('./data/500_complex.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
         });

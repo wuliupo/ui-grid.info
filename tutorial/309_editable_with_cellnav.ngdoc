@@ -51,7 +51,7 @@ of combining cellNav and edit to give a more spreadsheet-like experience.
               });
             };
 
-      $http.get('/data/500_complex.json')
+      $http.get('./data/500_complex.json')
         .success(function(data) {
           for(i = 0; i < data.length; i++){
             data[i].registered = new Date(data[i].registered);

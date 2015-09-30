@@ -64,13 +64,13 @@ This shows combined external pagination and sorting.
         var url;
         switch(paginationOptions.sort) {
           case uiGridConstants.ASC:
-            url = '/data/100_ASC.json';
+            url = './data/100_ASC.json';
             break;
           case uiGridConstants.DESC:
-            url = '/data/100_DESC.json';
+            url = './data/100_DESC.json';
             break;
           default:
-            url = '/data/100.json';
+            url = './data/100.json';
             break;
         }
 

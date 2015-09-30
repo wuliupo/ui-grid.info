@@ -50,7 +50,7 @@ It's all up to you. And if you know a better way then please submit it in an iss
 
       $scope.gridOptions = {  };
 
-      $http.get('/data/100.json')
+      $http.get('./data/100.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
         });

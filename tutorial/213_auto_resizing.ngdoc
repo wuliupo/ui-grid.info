@@ -35,7 +35,7 @@ To use, include the `'ui.grid.autoResize'` module in your angular app's dependen
         { name:'friends[2].name', displayName:'3rd friend', width:150 },
       ];
 
-      $http.get('/data/500_complex.json')
+      $http.get('./data/500_complex.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
         });

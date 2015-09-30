@@ -62,7 +62,7 @@ appears when you quickly scroll through the grid.
         { name: 'address.city'}
       ];
 
-      $http.get('/data/500_complex.json')
+      $http.get('./data/500_complex.json')
         .success(function(data) {
           for(i = 0; i < data.length; i++){
             data[i].subGridOptions = {
@@ -100,7 +100,7 @@ appears when you quickly scroll through the grid.
             { name: 'address.city'}
           ];
 
-          $http.get('/data/500_complex.json')
+          $http.get('./data/500_complex.json')
             .success(function(data) {
               for(i = 0; i < data.length; i++){
                 data[i].subGridOptions = {
@@ -126,7 +126,7 @@ appears when you quickly scroll through the grid.
                         { name: 'company'}
                       ]};
 
-                      $http.get('/data/100.json')
+                      $http.get('./data/100.json')
                         .success(function(data) {
                           row.entity.subGridOptions.data = data;
                         });
@@ -142,7 +142,7 @@ appears when you quickly scroll through the grid.
             { name: 'address.city'}
           ];
 
-          $http.get('/data/500_complex.json')
+          $http.get('./data/500_complex.json')
             .success(function(data) {
               $scope.gridOptions.data = data;
             });

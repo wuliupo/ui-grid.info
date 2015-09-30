@@ -50,7 +50,7 @@ extract values of selected cells.
         { name: 'guid', width:'100' }
       ];
 
-      $http.get('/data/500_complex.json')
+      $http.get('./data/500_complex.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
         });

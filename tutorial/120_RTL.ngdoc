@@ -30,7 +30,7 @@ The grid supports RTL languages
         ]
       };
 
-      $http.get('/data/100.json')
+      $http.get('./data/100.json')
         .success(function(data) {
           $scope.gridOptions.data = data;
         });

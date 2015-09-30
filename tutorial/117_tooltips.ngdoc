@@ -58,7 +58,7 @@ Tooltips respect the cellFilter, so if you define a cellFilter it will also be u
         }
       };
 
-      $http.get('/data/100.json')
+      $http.get('./data/100.json')
         .success(function(data) {
           data.forEach( function setGender( row, index ){
             row.gender = row.gender==='male' ? '1' : '2';

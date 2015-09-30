@@ -108,7 +108,7 @@ each save will take 3 seconds to complete.  Any row saved with a gender of "male
         gridApi.rowEdit.on.saveRow($scope, $scope.saveRow);
       };
 
-      $http.get('/data/500_complex.json')
+      $http.get('./data/500_complex.json')
       .success(function(data) {
         for(i = 0; i < data.length; i++){
           data[i].registered = new Date(data[i].registered);

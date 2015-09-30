@@ -58,7 +58,7 @@ a swap.  Fastwatch cannot be dynamically toggled - you need to set it upon grid 
         {field:'age'}
       ];
     
-      $http.get('/data/10000_complex.json')
+      $http.get('./data/10000_complex.json')
       .success(function(data) {
         for( var i=0; i<6; i++){
           data = data.concat(data);
