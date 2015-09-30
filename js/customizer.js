@@ -6,14 +6,14 @@ app.run(function($log, $rootScope, $http) {
 });
 
 app.constant('FILES',{
-  DATA_100: './data/100.json',
-  LESS_MAIN: '/less/main.less',
-  LESS_VARIABLES: '/less/variables.less',
-  JSON_THEMES: '/customizer/themes/themes.json',
+  DATA_100: '../docs/data/100.json',
+  LESS_MAIN: './less/main.less',
+  LESS_VARIABLES: './less/variables.less',
+  JSON_THEMES: './themes/themes.json',
 });
 
 app.constant('DIRECTORIES', {
-  BOOTSTRAP: './../../bootstrap'
+  BOOTSTRAP: '.'
 });
 
 app.controller('Main', function($log, $http, $scope, less, Theme, FILES) {
@@ -129,7 +129,7 @@ app.service('Theme', function($q, $http, FILES) {
           var promises = [];
           var themes = {};
           angular.forEach(themeList, function(theme) {
-            var tp = $http.get('/customizer/themes/' + theme + '.json');
+            var tp = $http.get('./themes/' + theme + '.json');
             tp.success(function (data) {
               themes[theme] = data;
             });
@@ -200,7 +200,7 @@ app.service('less', function($log, $q, FILES, DIRECTORIES) {
       }
       return less.render(src, {
          paths: ['.' ,'./less/'],  // Specify search paths for @import directives
-         filename: './..' + FILES.LESS_MAIN, // Specify a filename to know what the source directory was.
+         filename: FILES.LESS_MAIN, // Specify a filename to know what the source directory was.
          compress: comp,          // Minify CSS output
          modifyVars: modifyVars
        })
