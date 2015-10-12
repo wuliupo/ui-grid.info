@@ -6,12 +6,11 @@
     <title></title>
     <meta content="width=device-width" name="viewport">
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
-    <link href="/dist/release/ui-grid.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap-flatly.min.css" />
+    <link href="../css/ui-grid.css" rel="stylesheet">
 
-    <!--<script src="https://code.jquery.com/jquery-1.11.1.js"></script>-->
-    <script src="/lib/test/angular/1.2.26/angular.js"></script>
-    <script src="/dist/release/ui-grid.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/ui-grid.js"></script>
 
     <style>
         body {
@@ -72,7 +71,7 @@
             $scope.gridApi.saveState.restore( $scope, $scope.state );
         };
 
-        $http.get('https://rawgit.com/angular-ui/ui-grid.info/gh-pages/data/500_complex.json')
+        $http.get('../docs/data/500_complex.json')
                 .success(function(data) {
                     $scope.gridOptions.data = data;
                 });

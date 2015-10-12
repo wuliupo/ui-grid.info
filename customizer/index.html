@@ -6,56 +6,32 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <!--  <link rel="stylesheet" href="/docs/css/bootstrap.min.css" /> -->
-  <link rel="stylesheet" href="/docs/css/bootstrap-flatly.min.css" />
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="/css/site.css" />
-  <!--<link rel="stylesheet" href="/release/ui-grid-unstable.css" />-->
+  <link rel="stylesheet" href="../css/bootstrap-flatly.min.css" />
+  <link rel="stylesheet" href="../css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/site.css" />
+  <link rel="stylesheet" href="../css/ui-grid.css" />
   <style>
     .compiled-css {
       height: 280px;
     }
   </style>
-  <script>
-    function outerHTML(node){
-        // if IE, Chrome take the internal method otherwise build one
-        return node.outerHTML || (
-          function(n){
-              var div = document.createElement('div'), h;
-              div.appendChild(n);
-              h = div.innerHTML;
-              div = null;
-              return h;
-          })(node);
-    }
-
-    var l = document.createElement('link');
-    l.rel = 'stylesheet';
-    if (window.location.href.match('ui-grid.info')) {
-      l.href = '/release/ui-grid-unstable.css';
-    }
-    else {
-      l.href = '/release/ui-grid.css';
-    }
-    document.write(outerHTML(l));
-  </script>
 </head>
-<body>
+<body ng-app="customizer">
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="nav navbar-header">
-      <a href="/" class="navbar-brand">UI Grid</a>
+      <a href="../" class="navbar-brand">UI Grid</a>
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             Learn
             <b class="caret"></b>
           </a>
-          <ul class="dropdown-menu" role="menu">
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
-              <a href="/docs/#/api">Docs</a>
+              <a href="../docs/#/api">Docs</a>
             </li>
             <li>
-              <a href="/docs/#/tutorial">Tutorial</a>
+              <a href="../docs/#/tutorial">Tutorial</a>
             </li>
           </ul>
         </li>
@@ -63,10 +39,7 @@
     </div>
     <div class="navbar-header navbar-right">
       <p class="navbar-text hidden-phone">
-        <iframe class="nav-ghbtn" src="http://ghbtns.com/github-btn.html?user=angular-ui&repo=ng-grid&type=watch&count=true"
-              allowtransparency="true" frameborder="0" scrolling="0" width="120" height="20"></iframe>
-        <iframe class="nav-ghbtn" src="http://ghbtns.com/github-btn.html?user=angular-ui&repo=ng-grid&type=fork&count=true"
-              allowtransparency="true" frameborder="0" scrolling="0" width="120" height="20"></iframe>
+        <li><a class="nav-ghbtn" href="https://github.com/angular-ui/ng-grid/" target="_blank"> Github </a></li>
       </p>
     </div>
   </div>
@@ -203,48 +176,13 @@
     relativeUrls: false,
   }
   </script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+  <script src="../js/lodash.min.js"></script>
+  <script src="../js/less.js"></script>
+  <script src="../js/jquery.min.js"></script>
 
-  <!--
-  <script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.2.3/ZeroClipboard.js"></script>
-  <script>
-    // ZeroClipboard.config( { moviePath: '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.2.3/ZeroClipboard.swf' } );
-    var client = new ZeroClipboard({ moviePath: 'http://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.2.3/ZeroClipboard.swf' });
-  </script>
-  -->
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <!--  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script> -->
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
-
-  <script>
-    var s = document.createElement('script');
-    if (window.location.href.match('ui-grid.info')) {
-      s.src = '/release/ui-grid-unstable.js';
-    }
-    else {
-      // s.src = 'http://ui-grid.info/release/ui-grid-unstable.js';// '/release/ui-grid.js';
-      s.src = '/release/ui-grid.js';
-    }
-
-    var customizerScript = document.createElement('script');
-    customizerScript.src = '/js/customizer.js';
-
-    customizerScript.onload = function() {
-      angular.bootstrap(document.getElementById('customizerApp'), ['customizer']);
-    }
-
-    s.onload = function() {
-      // document.write(outerHTML(customizerScript));
-      document.getElementsByTagName('head')[0].appendChild(customizerScript);
-    }
-
-    // document.write(outerHTML(s));
-    document.getElementsByTagName('head')[0].appendChild(s);
-  </script>
-
-  <!--<script src="/js/customizer.js"></script>-->
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/ui-grid.js"></script>
+  <script src="../js/customizer.js"></script>
 </body>
 </html>
