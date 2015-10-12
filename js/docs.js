@@ -114,7 +114,7 @@ docsApp.serviceFactory.loadedUrls = function($document, versionedFiles) {
   var urls = {};
 
   angular.forEach($document.find('script'), function(script) {
-    var match = script.src.match(/^.*\/([^\/]*\.js)$/);
+    var match = (script.getAttribute('src')+'').match(/^.*\/([^\/]*\.js)$/);
     if (match) {
       urls[match[1].replace(/(\-\d.*)?(\.min)?\.js$/, '.js')] = match[0];
     }

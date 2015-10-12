@@ -127,7 +127,7 @@ img.AngularJS-small {
 /* =============================== */
 
 .form-search {
-  margin-right: 10px;
+  margin: 0 10px 40px 0;
 }
 
 .form-search .search-query {
